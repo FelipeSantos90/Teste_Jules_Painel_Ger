@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "observability-dashboard-backend"
+version = "0.1.0"
+description = "Backend for the Observability Dashboard"
+authors = ["Your Name <you@example.com>"] # Placeholder, replace as needed
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.109.0" # Checked for a recent version
+uvicorn = {extras = ["standard"], version = "^0.27.0"} # Checked for a recent version
+sqlalchemy = "^2.0"
+psycopg2-binary = "^2.9.9" # Checked for a recent version
+pydantic = {extras = ["email"], version = "^2.5.0"} # Checked for a recent version, Pydantic v2
+alembic = "^1.13.0" # Checked for a recent version
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies] # Optional: for development tools like pytest
+# pytest = "^7.0"
+# httpx = "^0.25.0" # For testing FastAPI apps
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,13 @@
+This directory is intended for Alembic database migration scripts.
+
+To initialize Alembic (if not already done):
+1. Make sure Alembic is installed (`pip install alembic`).
+2. Run `alembic init alembic` in the `observability_dashboard/backend/` directory.
+   This will create the `alembic.ini` file and the `alembic/` directory structure.
+3. Configure `alembic.ini`, especially the `sqlalchemy.url` to point to your database.
+4. Modify `alembic/env.py` to import your SQLAlchemy models (target_metadata).
+
+Common commands:
+- `alembic revision -m "create_some_table"` (to create a new migration script)
+- `alembic upgrade head` (to apply all migrations)
+- `alembic downgrade -1` (to revert the last migration)
